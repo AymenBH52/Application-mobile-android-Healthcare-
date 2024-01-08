@@ -9,7 +9,7 @@
 
 
     <TextView
-        android:id="@+id/textViewCartTotalCost"
+        android:id="@+id/textViewCLTotalCost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -17,10 +17,10 @@
         android:textColor="@color/yellowLight"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listViewBM" />
+        app:layout_constraintTop_toBottomOf="@+id/listViewCL" />
 
     <Button
-        android:id="@+id/buttonCartTime"
+        android:id="@+id/buttonCLTime"
         style="?android:spinnerStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -41,11 +41,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.943"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewCartTotalCost" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewCLTotalCost" />
 
 
     <Button
-        android:id="@+id/buttonCartCheckout"
+        android:id="@+id/buttonCLCheckout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Checkout"
@@ -64,10 +64,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.079"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewCartTotalCost" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewCLTotalCost" />
 
     <Button
-        android:id="@+id/buttonBMCartBack"
+        android:id="@+id/buttonCLBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
@@ -78,7 +78,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/buttonCartDate"
+        android:id="@+id/buttonCLDate"
         style="?android:spinnerStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -90,7 +90,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
-        android:id="@+id/textViewDDName"
+        android:id="@+id/textViewCLName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="24*7Healthcare"
@@ -116,10 +116,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDDName" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewCLName" />
 
     <TextView
-        android:id="@+id/textViewBMCartTitle"
+        android:id="@+id/textViewCLTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -132,7 +132,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewODTitle"/>
 
     <ListView
-        android:id="@+id/listViewBM"
+        android:id="@+id/listViewCL"
         android:layout_width="356dp"
         android:layout_height="363dp"
         android:layout_marginStart="16dp"

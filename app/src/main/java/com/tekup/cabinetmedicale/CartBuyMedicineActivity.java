@@ -27,7 +27,6 @@ public class CartBuyMedicineActivity extends AppCompatActivity {
     TextView tvTotal;
     ListView lst;
     private DatePickerDialog datePickerDialog;
-    private TimePickerDialog timePickerDialog;
     private Button dateButton, btnCheckout, btnBack;
     private String[][] packages = {};
 

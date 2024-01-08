@@ -38,12 +38,12 @@ public class CartLabActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart_lab);
 
-        dateButton = findViewById(R.id.buttonCartDate);
-        timeButton = findViewById(R.id.buttonCartTime);
-        btnCheckout = findViewById(R.id.buttonCartCheckout);
-        btnBack = findViewById(R.id.buttonBMCartBack);
-        tvTotal = findViewById(R.id.textViewCartTotalCost);
-        lst = findViewById(R.id.listViewBM);
+        dateButton = findViewById(R.id.buttonCLDate);
+        timeButton = findViewById(R.id.buttonCLTime);
+        btnCheckout = findViewById(R.id.buttonCLCheckout);
+        btnBack = findViewById(R.id.buttonCLBack);
+        tvTotal = findViewById(R.id.textViewCLTotalCost);
+        lst = findViewById(R.id.listViewCL);
 
 
 
@@ -69,7 +69,6 @@ public class CartLabActivity extends AppCompatActivity {
             totalAmount = totalAmount + Float.parseFloat(strData[1]);
         }
         tvTotal.setText("Total Cost : "+totalAmount);
-
         list = new ArrayList<>();
         for(int i=0; i<packages.length ; i++){
             item = new HashMap<String, String>();

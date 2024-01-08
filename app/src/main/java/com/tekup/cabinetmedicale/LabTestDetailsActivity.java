@@ -60,7 +60,7 @@ public class LabTestDetailsActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Product Already Added", Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    db.addCart(username,product,price,"Lab");
+                    db.addCart(username,product,price,"lab");
                     Toast.makeText(getApplicationContext(), "Record Inserted to Cart", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(LabTestDetailsActivity.this, LabTestActivity.class));
                 }
