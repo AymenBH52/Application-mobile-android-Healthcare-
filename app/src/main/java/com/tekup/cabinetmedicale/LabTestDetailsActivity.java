@@ -22,11 +22,11 @@ public class LabTestDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lab_test_details);
 
-        tvPackageName = findViewById(R.id.textViewCartTitle);
+        tvPackageName = findViewById(R.id.textViewBMCartTitle);
         tvTotalCost = findViewById(R.id.textViewLDTotalCost);
-        edDetails = findViewById(R.id.listViewCart);
-        btnAddTOCart = findViewById(R.id.buttonLDAddToCart);
-        btnBack = findViewById(R.id.buttonLDBack);
+        edDetails = findViewById(R.id.listViewBM);
+        btnAddTOCart = findViewById(R.id.buttonBMGoToCart);
+        btnBack = findViewById(R.id.buttonBMBack);
 
         edDetails.setKeyListener(null);
 
@@ -57,7 +57,7 @@ public class LabTestDetailsActivity extends AppCompatActivity {
                 Database db = new Database(getApplicationContext(), "healthcare", null, 1);
 
                 if(db.checkCart(username,product)==1){
-                    Toast.makeText(getApplicationContext(), "Product Alredy Added", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Product Already Added", Toast.LENGTH_SHORT).show();
                 }
                 else{
                     db.addCart(username,product,price,"Lab");

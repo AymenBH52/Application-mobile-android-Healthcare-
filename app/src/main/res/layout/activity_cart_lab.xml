@@ -17,7 +17,7 @@
         android:textColor="@color/yellowLight"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listViewCart" />
+        app:layout_constraintTop_toBottomOf="@+id/listViewBM" />
 
     <Button
         android:id="@+id/buttonCartTime"
@@ -67,7 +67,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewCartTotalCost" />
 
     <Button
-        android:id="@+id/buttonCartBack"
+        android:id="@+id/buttonBMCartBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
@@ -104,7 +104,7 @@
         app:layout_constraintVertical_bias="0.00999999" />
 
     <TextView
-        android:id="@+id/textViewDDTitle"
+        android:id="@+id/textViewODTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="628dp"
@@ -119,7 +119,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewDDName" />
 
     <TextView
-        android:id="@+id/textViewCartTitle"
+        android:id="@+id/textViewBMCartTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -129,10 +129,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDDTitle"/>
+        app:layout_constraintTop_toBottomOf="@+id/textViewODTitle"/>
 
     <ListView
-        android:id="@+id/listViewCart"
+        android:id="@+id/listViewBM"
         android:layout_width="356dp"
         android:layout_height="363dp"
         android:layout_marginStart="16dp"
@@ -148,7 +148,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDDTitle"
+        app:layout_constraintTop_toBottomOf="@+id/textViewODTitle"
         app:layout_constraintVertical_bias="0.157"
         tools:ignore="MissingConstraints" />
 

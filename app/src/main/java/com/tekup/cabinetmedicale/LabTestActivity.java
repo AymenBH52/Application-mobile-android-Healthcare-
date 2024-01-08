@@ -54,8 +54,6 @@ public class LabTestActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lab_test);
 
-        btnGoToCart = findViewById(R.id.buttonCartBack);
-        btnBack = findViewById(R.id.buttonCartBack);
         listView = findViewById(R.id.listViewLT);
 
         //Evenements des boutons :

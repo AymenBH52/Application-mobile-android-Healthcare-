@@ -45,5 +45,35 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(new Intent(HomeActivity.this,LabTestActivity.class));
             }
         });
+
+        // When click on Buy Medicine, go to BuyMedicineActivity
+        CardView buyMedicine=findViewById(R.id.cardBuyMedecine);
+        buyMedicine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this,BuyMedicineActivity.class));
+            }
+        });
+
+        // When click on order details, go to OrderDetailsActivity
+        CardView orderDetails=findViewById(R.id.cardOrderDetails);
+        orderDetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this,OrderDetailsActivity.class));
+            }
+        });
+
+        // When click on Health Article, go to HealthArticleActivity
+        CardView health = findViewById(R.id.cardHealthDoctor);
+        health.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this, HealthArticleActivity.class));
+            }
+        });
+
+
+
     }
 }

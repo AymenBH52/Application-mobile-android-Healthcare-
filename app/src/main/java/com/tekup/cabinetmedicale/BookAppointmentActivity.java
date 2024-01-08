@@ -6,6 +6,7 @@ import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +14,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import java.util.Calendar;
 
@@ -41,7 +43,7 @@ public class BookAppointmentActivity extends AppCompatActivity {
         ed4 = findViewById(R.id.editTextAppFees);
         dateButton = findViewById(R.id.buttonCartDate);
         timeButton = findViewById(R.id.buttonAppTime);
-        btnBook = findViewById(R.id.buttonCartBack);
+        btnBook = findViewById(R.id.buttonBMCartBack);
         btnBack = findViewById(R.id.buttonAppBack);
 
         ed1.setKeyListener(null);
@@ -91,13 +93,25 @@ public class BookAppointmentActivity extends AppCompatActivity {
             }
         });
 
+        // When click on Book button, add the appointment to the database
         btnBook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                // recover the username from shared preferences
+                Database db = new Database(getApplicationContext(), "healthcare", null, 1);
+                SharedPreferences sharedPreferences = getSharedPreferences("shared_prefs", MODE_PRIVATE );
+                String username = sharedPreferences.getString("username", "").toString();
+                // Check if the appointment already exists else add it to the database
+                if(db.checkAppointmentExists(username, title+" => "+fullname,address, contact, dateButton.getText().toString(), timeButton.getText().toString())==1){
+                    Toast.makeText(getApplicationContext(), "Appointment already booked", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    db.addOrder(username, title+" => "+fullname, address, contact, 0, dateButton.getText().toString(), timeButton.getText().toString(), Float.parseFloat(fees), "appointment");
+                    Toast.makeText(getApplicationContext(), "Your Booking is done Successfully", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(BookAppointmentActivity.this, HomeActivity.class));
+                }
             }
         });
-
     }
 
 

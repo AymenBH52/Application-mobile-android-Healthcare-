@@ -16,7 +16,6 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.TimePicker;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -42,9 +41,9 @@ public class CartLabActivity extends AppCompatActivity {
         dateButton = findViewById(R.id.buttonCartDate);
         timeButton = findViewById(R.id.buttonCartTime);
         btnCheckout = findViewById(R.id.buttonCartCheckout);
-        btnBack = findViewById(R.id.buttonCartBack);
+        btnBack = findViewById(R.id.buttonBMCartBack);
         tvTotal = findViewById(R.id.textViewCartTotalCost);
-        lst = findViewById(R.id.listViewCart);
+        lst = findViewById(R.id.listViewBM);
 
 
 
@@ -100,7 +99,11 @@ public class CartLabActivity extends AppCompatActivity {
         btnCheckout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(CartLabActivity.this, LabTestBookActivity.class));
+                Intent it = new Intent(CartLabActivity.this, LabTestBookActivity.class);
+                it.putExtra("date", dateButton.getText().toString());
+                it.putExtra("time", timeButton.getText().toString());
+                it.putExtra("price", tvTotal.getText().toString());
+                startActivity(it);
             }
         });
 

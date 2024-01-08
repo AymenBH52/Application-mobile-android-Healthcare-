@@ -26,6 +26,9 @@ public class Database extends SQLiteOpenHelper {
         //Create table cart
         String qry2 = "create table cart(username text,product text,price float,otype text)";
         sqLiteDatabase.execSQL(qry2);
+        //Create table orderplace
+        String qry3 = "create table orderplace(username text, fullname text, address text, contactno text, pincode int, date text, time text, amount float, otype text)";
+        sqLiteDatabase.execSQL(qry3);
     }
 
     @Override
@@ -56,6 +59,7 @@ public class Database extends SQLiteOpenHelper {
     //AddCart
     public void addCart (String username, String product, float price, String otype){
         ContentValues cv = new ContentValues();
+        System.out.println("username: " + username);
         cv.put("username",username);
         cv.put("product",product);
         cv.put("price",price);
@@ -90,6 +94,8 @@ public class Database extends SQLiteOpenHelper {
     }
     //Get data from cart
     public ArrayList getCartData(String username, String otype){
+        System.out.println("username: " + username);
+        System.out.println("otype: " + otype);
         ArrayList<String> arr = new ArrayList<>();
         SQLiteDatabase db = getReadableDatabase();
         String str[] = new String[2];
@@ -105,7 +111,60 @@ public class Database extends SQLiteOpenHelper {
         }
         db.close();
         return arr;
-
         }
+
+        // Add an Order to Database
+        public void addOrder(String username, String fullname, String address, String contactno, int pincode, String date, String time, float price, String otype){
+            ContentValues cv = new ContentValues();
+            cv.put("username", username);
+            cv.put("fullname", fullname);
+            cv.put("address", address);
+            cv.put("contactno", contactno);
+            cv.put("pincode", pincode);
+            cv.put("date", date);
+            cv.put("time", time);
+            cv.put("amount", price);
+            cv.put("otype", otype);
+            SQLiteDatabase db = this.getWritableDatabase();
+            db.insert("orderplace", null, cv);
+            db.close();
+        }
+        //Get Orders from database
+        public ArrayList getOrderData(String username){
+            ArrayList arrayList = new ArrayList();
+            SQLiteDatabase db = this.getReadableDatabase();
+            String str[] =  new String[1];
+            str[0] = username;
+            Cursor cursor = db.rawQuery("select * from orderplace where username = ?",str);
+            if(cursor.moveToFirst()){
+                do{
+                    arrayList.add(cursor.getString(1)+"$" + cursor.getString(2)+"$" + cursor.getString(3)+"$" +
+                                    cursor.getString(4)+"$" + cursor.getString(5)+"$" + cursor.getString(6)+"$" +
+                            cursor.getString(7)+"$" + cursor.getString(8));
+                }while(cursor.moveToNext());
+            }
+            db.close();
+            return arrayList;
+        }
+
+        // Check if the appointment already exists
+        public int checkAppointmentExists(String username, String fullname, String address, String contactno, String date, String time){
+            int result = 0;
+            String str[] = new String[6];
+            str[0] = username;
+            str[1] = fullname;
+            str[2] = address;
+            str[3] = contactno;
+            str[4] = date;
+            str[5] = time;
+            SQLiteDatabase db = getReadableDatabase();
+            Cursor c = db.rawQuery("select * from orderplace where username = ? and fullname = ? and address = ? and contactno = ? and date = ? and time = ?", str);
+            if(c.moveToFirst()){
+                result = 1;
+            }
+            db.close();
+            return result;
+        }
+
     }
 

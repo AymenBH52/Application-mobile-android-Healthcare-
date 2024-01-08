@@ -129,7 +129,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewAppTitle" />
 
     <Button
-        android:id="@+id/buttonCartBack"
+        android:id="@+id/buttonBMCartBack"
         android:layout_width="333dp"
         android:layout_height="38dp"
         android:layout_marginTop="32dp"
@@ -149,6 +149,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonCartBack" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonBMCartBack" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

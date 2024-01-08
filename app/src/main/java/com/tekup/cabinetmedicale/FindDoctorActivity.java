@@ -42,7 +42,7 @@ public class FindDoctorActivity extends AppCompatActivity {
             }
         });
         CardView dentist=findViewById(R.id.cardFDDentist);
-        dietician.setOnClickListener(new View.OnClickListener() {
+        dentist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent it=new Intent(FindDoctorActivity.this, DoctorDetailsActivity.class);

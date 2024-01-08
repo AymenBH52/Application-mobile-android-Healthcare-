@@ -20,7 +20,7 @@ TextView tv;
         setContentView(R.layout.activity_register);
         edUsername=findViewById(R.id.editTextAppFullName);
         edPassword=findViewById(R.id.editTextAppContactNumber);
-        btn=findViewById(R.id.buttonCartBack);
+        btn=findViewById(R.id.buttonBMCartBack);
         edEmail=findViewById(R.id.editTextAppAddress);
         edConfirm=findViewById(R.id.editTextAppFees);
         tv=findViewById(R.id.textViewExistingUser);
