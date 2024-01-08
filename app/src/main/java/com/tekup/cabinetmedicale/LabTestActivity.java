@@ -91,6 +91,7 @@ public class LabTestActivity extends AppCompatActivity {
                 it.putExtra("text1",packages[i][0]);
                 it.putExtra("text2", package_details[i]);
                 it.putExtra("text3", packages[i][4]);
+                startActivity(it);
             }
         });
 

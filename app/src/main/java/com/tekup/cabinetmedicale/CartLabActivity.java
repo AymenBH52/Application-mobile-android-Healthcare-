@@ -50,12 +50,12 @@ public class CartLabActivity extends AppCompatActivity {
 
         SharedPreferences sharedPreferences = getSharedPreferences("shared_prefs", Context.MODE_PRIVATE);
         String username = sharedPreferences.getString("username", "");
-/*
+
         Database db = new Database(getApplicationContext(), "healthcare", null, 1);
 
         float totalAmount = 0;
-        ArrayList<HashMap<String, String>> dbData = db.getCartData(username, "lab"); // Correction du type de données
-        Toast.makeText(getApplicationContext(), "" + dbData, Toast.LENGTH_LONG).show();
+        ArrayList dbData = db.getCartData(username, "lab"); // Correction du type de données
+        //Toast.makeText(getApplicationContext(), "" + dbData, Toast.LENGTH_LONG).show();
 
         packages = new String[dbData.size()][];
         for(int i=0; i<packages.length; i++){
@@ -64,12 +64,12 @@ public class CartLabActivity extends AppCompatActivity {
 
         for(int i=0; i<dbData.size();i++) {
             String arrData = dbData.get(i).toString();
-            String[] strData = arrData.split((java.util.regex.Pattern.quote("$"));
+            String[] strData = arrData.split(java.util.regex.Pattern.quote("$"));
             packages[i][0] = strData[0];
             packages[i][4] = "Cost : "+strData[1]+"/-";
             totalAmount = totalAmount + Float.parseFloat(strData[1]);
         }
-        tvTotal.setText("Total Cost : "+totalAmount); */
+        tvTotal.setText("Total Cost : "+totalAmount);
 
         list = new ArrayList<>();
         for(int i=0; i<packages.length ; i++){
