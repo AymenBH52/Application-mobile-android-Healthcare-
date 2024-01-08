@@ -8,7 +8,7 @@
     tools:context=".LabTestActivity">
 
     <Button
-        android:id="@+id/buttonCartCheckout"
+        android:id="@+id/buttonLTGoToCart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
@@ -49,7 +49,7 @@
         app:layout_constraintVertical_bias="0.011" />
 
     <TextView
-        android:id="@+id/textViewBMCartTitle"
+        android:id="@+id/textViewLTCartTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Lab Test and Packages"
@@ -78,7 +78,7 @@
 
 
     <Button
-        android:id="@+id/buttonBMCartBack"
+        android:id="@+id/buttonLTCartBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Back"
