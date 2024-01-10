@@ -65,7 +65,7 @@ public class CartBuyMedicineActivity extends AppCompatActivity {
             // We split arrData by delimiter "$" to create and array and store it strData
             String[] strData = arrData.split(java.util.regex.Pattern.quote("$"));
             packages[i][0] = strData[0];
-            packages[i][4] = "Cost : "+strData[1]+"/-";
+            packages[i][4] = "Cost : "+strData[1]+" DT";
             //Calculate the total amount
             totalAmount = totalAmount + Float.parseFloat(strData[1]);
         }
@@ -79,7 +79,7 @@ public class CartBuyMedicineActivity extends AppCompatActivity {
             item.put("line2", packages[i][1]);
             item.put("line3", packages[i][2]);
             item.put("line4", packages[i][3]);
-            item.put("line5", "Total Cost:" +packages[i][4]+"/-");
+            item.put("line5", "Total Cost:" +packages[i][4]+" DT");
             list.add(item);
         }
 

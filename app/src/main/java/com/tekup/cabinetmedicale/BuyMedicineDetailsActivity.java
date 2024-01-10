@@ -31,7 +31,7 @@ public class BuyMedicineDetailsActivity extends AppCompatActivity {
         Intent intent = getIntent();
         tvPackageName.setText(intent.getStringExtra("text1"));
         edDetails.setText(intent.getStringExtra("text2"));
-        tvTotalCost.setText(String.format("Total Cost: %s/-", intent.getStringExtra("text3")+"/-"));
+        tvTotalCost.setText(String.format("Total Cost: %s DT", intent.getStringExtra("text3")));
 
         // When click on Add to Cart button, add the product to the cart
         btnAddToCart.setOnClickListener(new View.OnClickListener() {
@@ -53,6 +53,12 @@ public class BuyMedicineDetailsActivity extends AppCompatActivity {
                   Toast.makeText(getApplicationContext(), "Product added to cart", Toast.LENGTH_SHORT).show();
                   startActivity(new Intent(BuyMedicineDetailsActivity.this, BuyMedicineActivity.class));
               }
+            }
+        });
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(BuyMedicineDetailsActivity.this, BuyMedicineActivity.class));
             }
         });
     }

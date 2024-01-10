@@ -17,29 +17,29 @@ public class BuyMedicineActivity extends AppCompatActivity {
 
 
     private String[][] packages = {
-            {"Uprise-03 1080IU Capsule","","","", "50"},
-            {"Healthvit Chronius Picolinate 200mcg Capsule","","","","305"},
+            {"Uprise-03 1080IU Capsule","","","", "20"},
+            {"Healthvit Chronius Picolinate 200mcg Capsule","","","","12"},
             {"Vitamin B Complex Capsules", "", "", "", "448"},
-            {"Inlife Vitamin E Wheat Germ Oil Capsule", "", "","","539"},
+            {"Inlife Vitamin E Wheat Germ Oil Capsule", "", "","","50"},
             {"Dolo 650 Tablet", "", "","", "30"},
             {"Crocin 650 Advance Tablet","","","","50"},
             {"Strepsils Medicated Lozenges for Sore Throat","","","","40"},
             {"Tata Ing Calcium + Vitamin D3", "","","","30"},
-            {"Feronia -XT Tablet","","","","130"},
+            {"Feronia -XT Tablet","","","","44"},
     };
 
     private String[] package_details = {
         "Building and keeping the bones & teeth strong\n" +
                 "Reducing Fatigue/stress and muscular pains\n" +
                 "Boosting immunity and increasing resistance against infection\n",
-        "Chromium is an essential trace mineral that plays an important role in helping insulin regulate blood glucose\n" +
-                "Provides relief from vitamin D deficiencies\n"+
+        "Chromium is an essential trace mineral that plays an important role in helping insulin regulate blood glucose\n",
+        "Provides relief from vitamin D deficiencies\n"+
                 "Helps in formation of red blood cells\n"+
                 "Maintains healthy nervous system",
         "It promotes health as well as skin benefit.\n" +
                 "It helps reduce skin blemish and pigmentation.\n" +
                 "It act as safeguard the skin from the harsh UVA and UVB sun rays.\n",
-        "Dole 650 Tablet helps relieve pain and fever by blocking the release of certain chemical messangers responsible for pain and fever\n" +
+        "Dole 650 Tablet helps relieve pain and fever by blocking the release of certain chemical messengers responsible for pain and fever\n" ,
         "Helps relieve fever and bring down a high temperature\n"+
                 "Suitable for people with a heart condition or high blood pressure",
         "Relieves the symptoms of a bacterial throat infection and soothes the recovery process\n"+

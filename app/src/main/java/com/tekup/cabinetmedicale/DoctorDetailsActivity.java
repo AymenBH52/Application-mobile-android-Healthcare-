@@ -15,38 +15,38 @@ import java.util.HashMap;
 
 public class DoctorDetailsActivity extends AppCompatActivity {
     private String[][] doctorDetails1 = {
-            {"Doctor Name:Mohsen Iifa","Hospital Address:Charles Nicols","Telephone Num:7474747","415"},
-            {"Doctor Name:Taid Jandoubi","Hospital Address:Yhtur","Telephone Num:7074747754","600"},
-            {"Doctor Name:Imen Kasah","Hospital Address:Charles Nicols","Telephone Num:2474747","500"},
-            {"Doctor Name:Jamila Aabdelaoui","Hospital Address:Rabta","Telephone Num:1452247","8632"}
+            {"Doctor Name:Mohsen Iifa","Hospital Address:Charles Nicols","Exp : 5years","Telephone Num:7474747","415"},
+            {"Doctor Name:Taid Jandoubi","Hospital Address:Yhtur","Exp : 3years","Telephone Num:7074747754","600"},
+            {"Doctor Name:Imen Kasah","Hospital Address:Charles Nicols","Exp : 10years","Telephone Num:2474747","500"},
+            {"Doctor Name:Jamila Aabdelaoui","Hospital Address:Rabta","Exp : 15years","Telephone Num:1452247","8632"}
     };
 
     private String[][] doctorDetails2 = {
-            {"Doctor Name:John Doe","Hospital Address:Main Street","Telephone Num:1234567","789"},
-            {"Doctor Name:Emily Smith","Hospital Address:Elm Avenue","Telephone Num:9876543","321"},
-            {"Doctor Name:Michael Johnson","Hospital Address:Pine Street","Telephone Num:5551234","432"},
-            {"Doctor Name:Sara Williams","Hospital Address:Maple Avenue","Telephone Num:7778888","567"}
+            {"Doctor Name:John Doe","Hospital Address:Main Street","Exp : 9years","Telephone Num:1234567","789"},
+            {"Doctor Name:Emily Smith","Hospital Address:Elm Avenue","Exp : 2years","Telephone Num:9876543","321"},
+            {"Doctor Name:Michael Johnson","Hospital Address:Pine Street","Exp : 2years","Telephone Num:5551234","432"},
+            {"Doctor Name:Sara Williams","Hospital Address:Maple Avenue","Exp : 1years","Telephone Num:7778888","567"}
     };
 
     private String[][] doctorDetails3 = {
-            {"Doctor Name:David Brown","Hospital Address:Cedar Lane","Telephone Num:3332222","654"},
-            {"Doctor Name:Laura Miller","Hospital Address:Oak Street","Telephone Num:9990001","876"},
-            {"Doctor Name:Daniel Wilson","Hospital Address:Willow Avenue","Telephone Num:1110000","246"},
-            {"Doctor Name:Amy Garcia","Hospital Address:Sunset Boulevard","Telephone Num:8889991","135"}
+            {"Doctor Name:David Brown","Hospital Address:Cedar Lane","Exp : 8years","Telephone Num:3332222","654"},
+            {"Doctor Name:Laura Miller","Hospital Address:Oak Street","Exp : 12years","Telephone Num:9990001","876"},
+            {"Doctor Name:Daniel Wilson","Hospital Address:Willow Avenue","Exp : 4years","Telephone Num:1110000","246"},
+            {"Doctor Name:Amy Garcia","Hospital Address:Sunset Boulevard","Exp : 4years","Telephone Num:8889991","135"}
     };
 
     private String[][] doctorDetails4 = {
-            {"Doctor Name:Robert Lee","Hospital Address:Waterfront Road","Telephone Num:4443332","978"},
-            {"Doctor Name:Olivia Davis","Hospital Address:Hillside Drive","Telephone Num:2221110","357"},
-            {"Doctor Name:William Clark","Hospital Address:Meadow Lane","Telephone Num:7773331","789"},
-            {"Doctor Name:Sophia Martinez","Hospital Address:Park Avenue","Telephone Num:8880009","654"}
+            {"Doctor Name:Robert Lee","Hospital Address:Waterfront Road","Exp : 4years","Telephone Num:4443332","978"},
+            {"Doctor Name:Olivia Davis","Hospital Address:Hillside Drive","Exp : 8years","Telephone Num:2221110","357"},
+            {"Doctor Name:William Clark","Hospital Address:Meadow Lane","Exp : 6years","Telephone Num:7773331","789"},
+            {"Doctor Name:Sophia Martinez","Hospital Address:Park Avenue","Exp : 2years","Telephone Num:8880009","654"}
     };
 
     private String[][] doctorDetails5 = {
-            {"Doctor Name:Ethan Wright","Hospital Address:Harbor Street","Telephone Num:1237890","456"},
-            {"Doctor Name:Chloe Anderson","Hospital Address:Valley Road","Telephone Num:4567890","987"},
-            {"Doctor Name:Aiden Hernandez","Hospital Address:Mountain View","Telephone Num:9871234","321"},
-            {"Doctor Name:Isabella Thompson","Hospital Address:Lakeside Drive","Telephone Num:5550001","654"}
+            {"Doctor Name:Ethan Wright","Hospital Address:Harbor Street","Exp : 9years","Telephone Num:1237890","456"},
+            {"Doctor Name:Chloe Anderson","Hospital Address:Valley Road","Exp : 21years","Telephone Num:4567890","987"},
+            {"Doctor Name:Aiden Hernandez","Hospital Address:Mountain View","Exp : 12years","Telephone Num:9871234","321"},
+            {"Doctor Name:Isabella Thompson","Hospital Address:Lakeside Drive","Exp : 10years","Telephone Num:5550001","654"}
     };
 
 TextView tv;
@@ -93,11 +93,11 @@ HashMap<String,String> item;
       List=new ArrayList<>();
       for(int i=0;i<doctorDetails.length;i++){
           item=new HashMap<String, String>();
-          item.put("Line1",doctorDetails[i][0]);
-          item.put("Line2",doctorDetails[i][1]);
-          item.put("Line3",doctorDetails[i][2]);
-          item.put("Line4",doctorDetails[i][3]);
-          item.put("Line5","con fees:"+doctorDetails[i][4]+"/-");
+          item.put("line1",doctorDetails[i][0]);
+          item.put("line2",doctorDetails[i][1]);
+          item.put("line3",doctorDetails[i][2]);
+          item.put("line4",doctorDetails[i][3]);
+          item.put("line5","con fees:"+doctorDetails[i][4]+"/-");
           List.add(item);
       }
 sa=new SimpleAdapter(this,List,
